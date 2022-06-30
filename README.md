@@ -8,7 +8,7 @@
 - [X] 강의를 듣고난 후에 당신에게 벌어질 일
 - [X] 프로그래밍은 어렵지 않다
 
-### 섹션 1. 자바스크립트의 기본문법
+### [섹션 1. 자바스크립트의 기본문법](https://github.com/minjeong-river/JavaScript/tree/main/01.%20%EC%9E%90%EB%B0%94%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%EC%9D%98%20%EA%B8%B0%EB%B3%B8%EB%AC%B8%EB%B2%95)
 - [X] 변수란?
 - [X] 자료형과 연산자
 - [X] 변수와 자료형 문제
