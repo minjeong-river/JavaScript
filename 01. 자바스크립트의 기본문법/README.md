@@ -105,7 +105,7 @@ console.log(fruit)      // ['banana', 'apple', 'grape', 'mango']
 console.log(fruit[3])   // mango
 ```
 
-### 배열 값 변경
+### 1. 배열 값 변경
 
 ```javascript
 fruitp[0] = 'cherry';
@@ -113,33 +113,33 @@ fruit[3] = 'tomato';
 console.log(frult);     // ['cherry', 'apple', 'tomato', mango]
 ```
 
-### pop() : 마지막에 있는 아이템 제거
+### 2. pop() : 마지막에 있는 아이템 제거
 
 ```javascript
 fruit.pop();
 console.log(fruit);     // mango
 ```
 
-### push() : 마지막 인덱스 위치에 아이템 추가
+### 3. push() : 마지막 인덱스 위치에 아이템 추가
 
 ```javascript
 fruit.push('pineapple');
 console.log(frult);     // pineapple
 ```
 
-### includes() : 해당 아이템을 배열이 포함하고 있는지 알려줌
+### 4. includes() : 해당 아이템을 배열이 포함하고 있는지 알려줌
 
 ```javascript
 console.log(fruit.includes('apple'));  // true
 ```
 
-### indexOf() : 인덱스 번호 확인
+### 5. indexOf() : 인덱스 번호 확인
 
 ```javascript
 console.log(fruit.indexOf('apple'));   // 1
 ```
 
-### slice() : 배열 아이템을 잘라내는 역할 (시작점, 끝점-끝점 미포함)
+### 6. slice() : 배열 아이템을 잘라내는 역할 (시작점, 끝점-끝점 미포함)
 
 slice()는 기존의 배열을 건드리지 않는다. slice() 후 새로운 배열을 만든다.
 
@@ -151,11 +151,57 @@ fruit.slice(1,3);                // ['apple', 'tomato'];
 console.log(fruit);              // ['cherry', 'apple', 'tomato', mango]
 ```
 
-### splice : 시작점으로부터 몇 개의 아이템을 제거하고 싶은지
+### 7. splice : 시작점으로부터 몇 개의 아이템을 제거하고 싶은지
 
 splice()는 기존의 배열이 잘린다.
 
 ```javascript
 fruit.splice(2,1);
 console.log(fruit);  // ['cherry', 'apple', 'pineapple']
+```
+
+---
+
+## 객체
+
+```javascript
+let patient = {
+   name : "jimin",
+   age : 17,
+   disease : "cold"
+}
+
+console.log(patient);         // {name: 'jimin', age: 17, disease: 'cold'}
+console.log(patient.name);    // jimin
+console.log(patient["name"])  // jimin
+```
+
+### 1. 값 변경
+
+```javascript
+patient.name = "jk";
+patient["age"] = 25;
+console.log(patient);   // {name: 'jk', age: 25, disease: 'cold'}
+```
+
+### 2. 객체를 배열에 넣기
+
+```javascript
+let patientList = [
+   {name:"jimin", age: 13},
+   {name:"jk", age:25},
+   {name:"jhope", age:40}
+];
+
+console.log(patientList);  // {name: 'jimin', age: 13}
+                           // {name: 'jk', age: 25}
+                           // {name: 'jhope', age: 40}
+```
+
+### 3. 배열 안에 있는 객체 값 출력
+
+```javascript
+console.log(patientList[0].name);   // jimin
+console.log(patientList[1].name);   // jk
+console.log(patientList[1].name);   // jhope
 ```
