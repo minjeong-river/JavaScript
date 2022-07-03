@@ -4,7 +4,7 @@
 - 자료형과 연산자
 - 변수와 자료형 문제
 - [보너스트랙: 호이스팅, let과 var의 차이](#보너스트랙-호이스팅-let과-var의-차이)
-- 배열
+- [배열](#배열)
 - 배열 문제
 - 객체
 - if문
@@ -92,4 +92,70 @@ let a = 2;
 console.log(a);
 
 //  identifier 'a' has already been declared error
+```
+
+---
+
+## 배열
+
+```javascript
+let fruit = ['banana', 'apple', 'grape', 'mango'];
+
+console.log(fruit)      // ['banana', 'apple', 'grape', 'mango']
+console.log(fruit[3])   // mango
+```
+
+### 배열 값 변경
+
+```javascript
+fruitp[0] = 'cherry';
+fruit[3] = 'tomato';
+console.log(frult);     // ['cherry', 'apple', 'tomato', mango]
+```
+
+### pop() : 마지막에 있는 아이템 제거
+
+```javascript
+fruit.pop();
+console.log(fruit);     // mango
+```
+
+### push() : 마지막 인덱스 위치에 아이템 추가
+
+```javascript
+fruit.push('pineapple');
+console.log(frult);     // pineapple
+```
+
+### includes() : 해당 아이템을 배열이 포함하고 있는지 알려줌
+
+```javascript
+console.log(fruit.includes('apple'));  // true
+```
+
+### indexOf() : 인덱스 번호 확인
+
+```javascript
+console.log(fruit.indexOf('apple'));   // 1
+```
+
+### slice() : 배열 아이템을 잘라내는 역할 (시작점, 끝점-끝점 미포함)
+
+slice()는 기존의 배열을 건드리지 않는다. slice() 후 새로운 배열을 만든다.
+
+```javascript
+console.log(fruit.slice(1));     // ['apple', 'tomato', 'pineapple']
+console.log(fruit.slice(1,3));   // ['apple', 'tomato'];
+
+fruit.slice(1,3);                // ['apple', 'tomato'];
+console.log(fruit);              // ['cherry', 'apple', 'tomato', mango]
+```
+
+### splice : 시작점으로부터 몇 개의 아이템을 제거하고 싶은지
+
+splice()는 기존의 배열이 잘린다.
+
+```javascript
+fruit.splice(2,1);
+console.log(fruit);  // ['cherry', 'apple', 'pineapple']
 ```
